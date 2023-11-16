@@ -6,12 +6,14 @@
 
 - [Overview](#overview)
 - [Downloading the IBM Z Accelerated for Snap ML container image](#container)
+- [Container Image Contents](#contents)
 - [Snap ML Usage](#snapml)
 - [A Look into the Acceleration](#acceleration)
 - [Security and Deployment Guidelines](#security-and-deployment-guidelines)
 - [Using the Code Samples](#code-samples)
 - [Frequently Asked Questions](#faq)
-- [Versions and Release Cadence](#versions)
+- [Technical Support](#contact)
+- [Versioning Policy and Release Cadence](#versions)
 - [Licenses](#licenses)
 
 # Overview <a id="overview"></a>
@@ -27,16 +29,16 @@ Accelerator for AI through the
 [IBM z Deep Neural Network](https://github.com/IBM/zDNN) (zDNN) library. The IBM
 zDNN library contains a set of primitives that support Deep Neural Networks.
 These primitives transparently target the IBM Integrated Accelerator for AI on
-IBM z16™ and later. No changes to the original model are needed to take
-advantage of the new inference acceleration capabilities.
+IBM z16 and later. No changes to the original model are needed to take advantage
+of the new inference acceleration capabilities.
 
-_Note. When using IBM Z Accelerated for Snap ML on either an IBM z14™ or an IBM
-z15™, Snap ML will transparently target the CPU with no changes to the model._
+_Note. When using IBM Z Accelerated for Snap ML on either an IBM z15® or an IBM
+z14®, Snap ML will transparently target the CPU with no changes to the model._
 
 # Downloading the IBM Z Accelerated for Snap ML container image <a id="container"></a>
 
 Downloading the IBM Z Accelerated for Snap ML container image requires
-credentials for the IBM Z and LinuxONE Container Registry,
+credentials for the IBM Z and IBM® LinuxONE Container Registry,
 [icr.io](https://icr.io).
 
 Documentation on obtaining credentials to `icr.io` is located
@@ -76,23 +78,27 @@ docker rmi <IMAGE ID>
 terms of Docker. If you are utilizing Podman, please replace `docker` with
 `podman` when using our example code snippets._
 
+# Container Image Contents <a id="contents"></a>
+
+To view a brief overview of the operating system version, software versions and
+content installed in the container, as well as any release notes for each
+released container image version, please visit the `releases` section of this
+GitHub Repository, or you can click
+[here](https://github.com/IBM/ibmz-accelerated-for-snapml/releases).
+
 # Snap ML Usage <a id="snapml"></a>
 
 For documentation on how to train and run inferences on models with Snap ML
 please visit the official
 [Snap ML documentation](https://snapml.readthedocs.io/en/latest/).
 
-For brief examples on how to train and run inferences on models with Snap ML
-please visit our [samples section](#code-samples)
-
 # A Look into the Acceleration <a id="acceleration"></a>
 
-On IBM® z16™ and later, Snap ML provides accelerated inference for
-tree-ensemble models via the IBM Integrated Accelerator for AI. These models can
-either be trained using Snap ML, or trained using external software frameworks
-(such as scikit-learn, XGBoost or LightGBM) and then imported into Snap ML. For
-more information on exactly which models and frameworks are supported, please
-see the
+On IBM z16 and later, Snap ML provides accelerated inference for tree-ensemble
+models via the IBM Integrated Accelerator for AI. These models can either be
+trained using Snap ML, or trained using external software frameworks (such as
+scikit-learn, XGBoost or LightGBM) and then imported into Snap ML. For more
+information on exactly which models and frameworks are supported, please see the
 [model import documentation](https://snapml.readthedocs.io/en/latest/model_import.html).
 
 When importing models, if the `tree_format` parameter is set to `auto`, Snap ML
@@ -103,8 +109,9 @@ for execution on the CPU.
 
 # Security and Deployment Guidelines <a id="security-and-deployment-guidelines"></a>
 
-- Documentation for security and deployment best practices can be found
-  [here](deployment-guidelines.md).
+- For security and deployment best practices, please visit the common AI Toolkit
+  documentation found
+  [here](https://github.com/IBM/ai-toolkit-for-z-and-linuxone).
 
 # Using the Code Samples <a id="code-samples"></a>
 
@@ -128,9 +135,14 @@ You may run the IBM Z Accelerated for Snap ML container image on IBM Linux on Z
 or IBM® z/OS® Container Extensions (IBM zCX).
 
 _Note. The IBM Z Accelerated for Snap ML will transparently target the IBM
-Integrated Accelerator for AI on IBM® z16™ and later. However, if using the
-IBM Z Accelerated for Snap ML on either an IBM z14™ or an IBM z15™, Snap ML
-will transparently target the CPU with no changes to the model._
+Integrated Accelerator for AI on IBM z16 and later. However, if using the IBM Z
+Accelerated for Snap ML on either an IBM z15 or an IBM z14, Snap ML will
+transparently target the CPU with no changes to the model._
+
+# Technical Support <a id="contact"></a>
+
+Information regarding technical support can be found
+[here](https://github.com/IBM/ai-toolkit-for-z-and-linuxone).
 
 # Versions and Release cadence <a id="versions"></a>
 
@@ -184,8 +196,11 @@ The registered trademark Linux® is used pursuant to a sublicense from the Linux
 Foundation, the exclusive licensee of Linus Torvalds, owner of the mark on a
 worldwide basis.
 
-IBM, the IBM logo, and ibm.com are trademarks or registered trademarks of
-International Business Machines Corp., registered in many jurisdictions
-worldwide. Other product and service names might be trademarks of IBM or other
-companies. A current list of IBM trademarks is available at Copyright and
-Trademark information (<www.ibm.com/legal/copytrade.shtml>).
+IBM, the IBM logo, and ibm.com, IBM z16, IBM z15, IBM z14 are trademarks or
+registered trademarks of International Business Machines Corp., registered in
+many jurisdictions worldwide. Other product and service names might be
+trademarks of IBM or other companies. The current list of IBM trademarks can be
+found [here](https://www.ibm.com/legal/copyright-trademark).
+
+For additional disclaimers, please visit the general AI Toolkit documentation
+found [here](https://github.com/IBM/ai-toolkit-for-z-and-linuxone).
